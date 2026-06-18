@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANJALA N A - Portfolio</title>
+    <!-- TAILWIND CDN: This lets you use Tailwind without installing anything! -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+    
+
+.typing {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #ea580c;
+    animation:
+        typing 3s steps(22, end) forwards,
+        blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 35ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+</style>
+</head>
+<body class="bg-pink-50 text-gray-800 font-sans antialiased scroll-smooth">
+    
+    
+    <nav class="bg-orange-600 shadow-sm py-4 px-6 relative">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold text-white">ANJALA N A</div>
+           <button id="menu-btn" class="md:hidden text-white text-2xl">
+             ☰
+           </button>
+
+               <div id="menu" class="hidden absolute top-16 right-6 bg-orange-600 p-4 rounded-lg 
+               shadow-lg flex-col gap-3 md:static md:flex md:flex-row md:bg-transparent md:p-0">
+                <a href="#home" class="font-extrabold text-white hover:text-orange-200">Home</a>
+                <a href="#about" class="font-extrabold text-white hover:text-orange-200">About</a>
+                <a href="#skills" class="font-extrabold text-white hover:text-orange-200">Skills</a>
+                <a href="#projects" class="font-extrabold text-white hover:text-orange-200">Projects</a>
+                <a href="#certifications" class="font-extrabold text-white hover:text-orange-200">Certifications</a>
+                <a href="#contact" class="font-extrabold text-white hover:text-orange-200">Contact</a>
+               </div>
+        </div>
+    </nav>
+    <script>
+         const menuBtn = document.getElementById('menu-btn');
+         const menu = document.getElementById('menu');
+
+         menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+    });
+    </script>
+
+    <!-- TASK 2: HERO SECTION (Days 1-3) -->
+    <header id="home"  class="max-w-4xl mx-auto text-center py-20 px-4">
+        <!-- Student Task: Replace this placeholder image with your own professional photo later -->
+        <img src= "mee.jpeg" alt="Profile" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-orange-500">
+        
+        <h1 class="text-4xl font-extrabold text-gray-900 animate-pulse tracking-tight sm:text-5xl">
+            Hi, I'm ANJALA N A
+        </h1>
+        <p class="typing mt-4 text-xl text-gray-900 py-8  mx-auto w-fit text-center font-semibold typing">
+          Aspiring Computer Science Student.
+        </p>
+        <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
+            A 2nd-year B.Tech Computer Science student passionate about coding, building software, and learning new technologies.
+        </p>
+        <div class="mt-6">
+            <a href="rezume24.pdf"
+             target="_blank"
+             class="bg-orange-600 hover:bg-orange-700 text-white  font-medium px-6 py-2.5 rounded-lg transition shadow">
+              View My Resume
+            </a>
+        </div>
+    </header>
+    <section id="about" class="max-w-4xl mx-auto px-6 py-12">
+
+    <h2 class="text-3xl font-bold text-center mb-6">
+        About Me
+    </h2>
+
+    <p class="text-gray-600 text-center leading-relaxed">
+        Hello! I'm Anjala N A, a second-year B.Tech Computer Science student passionate about web development and software development. I enjoy building responsive websites, learning modern technologies, and creating projects that solve real-world problems. Currently, I am improving my skills in HTML, CSS, JavaScript, React, Tailwind CSS, GitHub, and Data Structures.
+    </p>
+
+    </section>
+
+    <!-- TASK 3: SKILLS SECTION (Days 4-5) -->
+    <!-- Hint: Read up on 'grid-cols-1 md:grid-cols-3' to make this section look good on mobile vs laptops -->
+    <section id="skills" class="max-w-6xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold text-center mb-8">My Coding Skills</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+            <span class="bg-orange-50 text-white-600 px-4 py-2 rounded-full shadow hover:shadow-xl hover:-translate-y-2 transition duration-300 font-medium text-sm border border-orange-200">Github</span>
+            <span class="bg-orange-50 text-white-600 px-4 py-2 rounded-full shadow hover:shadow-xl hover:-translate-y-2 transition duration-300 font-medium text-sm border border-orange-200">Java</span>
+            <span class="bg-orange-50 text-white-600 px-4 py-2 rounded-full shadow hover:shadow-xl hover:-translate-y-2 transition duration-300 font-medium text-sm border border-orange-200">Data Structures</span>
+            <span class="bg-orange-50 text-white-600 px-4 py-2 rounded-full shadow hover:shadow-xl hover:-translate-y-2 transition duration-300 font-medium text-sm border border-orange-200">HTML & CSS</span>
+            <span class="bg-orange-50 text-white-600 px-4 py-2 rounded-full shadow hover:shadow-xl hover:-translate-y-2 transition duration-300 font-medium text-sm border border-orange-200">C Programming</span>
+            <span class="bg-orange-50 text-white-600 px-4 py-2 rounded-full shadow hover:shadow-xl hover:-translate-y-2 transition duration-300 font-medium text-sm border border-orange-200">JavaScript</span>
+        
+        
+        </div>
+    </section>
+    
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-12">
+    
+    <h2 class="text-3xl font-bold text-center mb-8">
+        My Projects
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        
+        <div class="bg-amber-50 p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-2 transition duration-300">
+            <img src="recohub.png"
+                alt="RecoHub Project"
+                class="w-full h-48 object-cover rounded-lg mb-4">
+
+            <h3 class="text-xl font-semibold mb-3">
+                Anime-Recommendation Website RecoHub
+            </h3>
+
+            <p class="text-gray-600 mb-4">
+                A web application built using HTML, CSS, and JavaScript that uses the Jikan API to display top anime and recommendations.
+            </p>
+            <a href="https://anjala25.github.io/RecoHub/"
+            target="_blank"
+            class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 inline-block">
+              view project
+            </a>
+            
+        </div>
+
+        
+        <div class="bg-amber-50 p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-2 transition duration-300">
+              <img src="eduquiz.png"
+                    alt="Eduquiz Project"
+                    class="w-full h-48 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold mb-3">
+               An Educational Quiz web  Application - Eduquiz
+            </h3>
+
+            <p class="text-gray-600 mb-4">
+                Cracking the PCMB Code: A Fun-Filled Adventure.A quiz application using react js.
+                </p>
+            <a href="https://edu-quiz-git-main-anjala-n-as-projects.vercel.app/"
+            target="blank"
+            class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 inline-block">
+              View project
+            </a>
+
+
+
+            
+        </div>
+        <div class="bg-amber-50 p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-2 transition duration-300">
+              <img src="wee.png"
+                    alt="WEEE Project"
+                    class="w-full h-48 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold mb-3">
+                WEEE - E-Waste Management System
+            </h3>
+
+            <p class="text-gray-600 mb-4">
+                WEEE is dedicated to revolutionizing e-waste management by providing innovative recycling solutions.
+            </p>
+            <a href="https://anjala25.github.io/WEEE-website/"
+            target="_blank"
+            class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 inline-block">
+              View project
+            </a>
+        </div>
+        <div class="bg-amber-50 p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-2 transition duration-300">
+              <img src="think.png"
+                    alt="Think_Ahead Project"
+                    class="w-full h-48 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold mb-3">
+                Think_Ahead  Plan Smarter, Study Better
+            </h3>
+
+            <p class="text-gray-600 mb-4">
+                Think _ahead  Plan Smarter, Study Better Think AHead is your all-in-one study planner that helps you 
+                create personalized timetables, choose the right subjects to focus on, and organize your learning efficiently.
+             </p>
+            <a href="https://anjala25.github.io/-Think_Ahead-/"
+            target="_blank"
+            class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 inline-block">
+              View project
+            </a>
+        </div>
+
+    </div>
+
+</section>
+<section id="certifications" class="max-w-6xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold text-center mb-8"></h2>
+        <div class="flex flex-wrap justify-center gap-3">
+            <section id="certifications" class="max-w-6xl mx-auto px-6 py-12">
+
+    <h2 class="text-3xl font-bold text-center mb-8">
+        Certifications & Achievements
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-amber-50 p-6 rounded-xl shadow hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold">
+                GDG Solution Challenge
+            </h3>
+            <a href="hack2skill.png"
+            target="_blank"
+            class="text-orange-600 font-medium hover:underline">
+            View Certificate
+            </a>
+            <p class="text-gray-600">
+                Certificate of Achievement - Hack2Skill
+            </p>
+        </div>
+
+        <div class="bg-amber-50 p-6 rounded-xl shadow hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold">
+                Basics of Python
+            </h3>
+            <a href="python1.pdf"
+            target="_blank"
+            class="text-orange-600 font-medium hover:underline">
+            View Certificate
+            </a>
+            <p class="text-gray-600">
+                Infosys Springboard
+            </p>
+        </div>
+
+        <div class="bg-amber-50 p-6 rounded-xl shadow hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold">
+                TCS iON Career Edge – Young Professional
+            </h3>
+            <a href="AnjalaTCS.pdf"
+            target="_blank"
+            class="text-orange-600 font-medium hover:underline">
+            View Certificate
+            </a>
+            <p class="text-gray-600">
+                TCS iON
+            </p>
+        </div>
+
+        <div class="bg-amber-50 p-6 rounded-xl shadow hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold">
+                GenAI Powered Data Analytics Job Simulation
+            </h3>
+            <a href="tata.pdf"
+            target="_blank"
+            class="text-orange-600 font-medium hover:underline">
+            View Certificate
+            </a>
+            <p class="text-gray-600">
+                Tata Forage
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+</section>
+<section id="contact" class="max-w-6xl mx-auto px-6 py-12">
+   
+    <h2 class="text-3xl font-bold animate-pulse text-center mb-4">
+        Contact Me
+    </h2>
+    <p class="text-center text-gray-600 mb-8">
+        Feel free to reach out to me.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+        <div class="bg-amber-50 p-6 rounded-lg shadow hover:shadow-xl hover:-translate-y-2 transition duration-300 shadow text-center">
+            <h3 class="font-semibold">Email</h3>
+            <a href="mailto:anjalanalakath@gmail.com"
+               class="text-orange-600 hover:underline">
+               anjalanalakath@gmail.com
+            </a>
+        </div>
+         <div class="bg-amber-50 p-6 rounded-lg shadow hover:shadow-xl hover:-translate-y-2 transition duration-300 text-center">
+            <h3 class="font-semibold">GitHub</h3>
+            <a href="https://github.com/anjala25"
+               target="_blank"
+               class="text-orange-600 hover:underline">
+               GitHub Profile
+            </a>
+        </div>
+        <div class="bg-amber-50 p-6 rounded-lg shadow hover:shadow-xl hover:-translate-y-2 transition duration-300 text-center">
+            <h3 class="font-semibold">LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/anjala-n-a-432126339?"
+               target="_blank"
+               class="text-orange-600 hover:underline">
+               LinkedIn Profile
+            </a>
+        </div>
+    </div>
+</section>
+
+<p class="text-center text-gray-600 mb-8">
+    Have an opportunity, project idea, or just want to connect? Feel free to send me a message.
+</p>
+<div class="max-w-2xl mx-auto">
+
+<form
+ action="https://formsubmit.co/anjalanalakath@gmail.com"
+ method="POST"
+ class="mt-10 bg-gradient-to-br from-orange-50 to-amber-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
+
+    <input type="hidden" name="_captcha" value="false">
+
+    <input
+        type="text"
+        name="Name"
+        placeholder="Your Name"
+        required
+        class="w-full p-3 border border-orange-200 rounded-lg mb-4 
+        focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition">
+
+    <input
+        type="email"
+        name="Email"
+        placeholder="Your Email"
+        required
+        class="w-full p-3 border border-orange-200 rounded-lg mb-4 
+        focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition">
+
+    <input
+        type="tel"
+        name="Phone"
+        placeholder="Phone Number"
+        class="w-full p-3 border border-orange-200 rounded-lg mb-4 
+        focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition">
+
+    <textarea
+        name="Message"
+        rows="5"
+        placeholder="Your Message"
+        required
+        class="w-full p-3 border border-orange-200 rounded-lg mb-4 focus:outline-none 
+        focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition"></textarea>
+
+    <button
+        type="submit"
+        class="bg-orange-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-orange-700
+        hover:scale-105 transition duration-300 shadow-lg">
+        Send Message
+    </button>
+
+</form>
+
+</div>
+
+<footer class="bg-orange-600 text-white py-6 mt-12">
+    
+    <div class="max-w-6xl mx-auto text-center">
+
+        <p>
+            © 2026 Anjala N A. All Rights Reserved.
+        </p>
+
+        
+
+    </div>
+
+</footer>
+   
+</body>
+</html>
